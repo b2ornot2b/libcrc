@@ -69,7 +69,7 @@ unsigned char * checksum_NMEA( const unsigned char *input_str, unsigned char *re
 
 	while ( *ptr  &&  *ptr != '\r'  &&  *ptr != '\n'  &&  *ptr != '*' ) checksum ^= *ptr++;
 
-	snprintf( (char *) result, 3, "%02X", checksum );
+	sprintf( (char *) result, "%02X", checksum );
 
 	return result; 
 
